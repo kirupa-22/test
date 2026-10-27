@@ -1,0 +1,6 @@
+{
+  "name": "NeoByte Builders - The Next-Gen Learning Hub",
+  "description": "Continuous tech education for 4th Grade and up. Master Core Python, Web Development, and Next-Gen AI & Developer Tools. Weekend batches with dedicated mentor guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
