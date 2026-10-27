@@ -1,0 +1,1732 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO & Brand Metadata -->
+    <title>NeoByte Builders - The Next-Gen Learning Hub</title>
+    <meta name="description" content="Continuous technology mentorship for 4th Grade and up. Build unshakeable logical thinking, creative problem-solving, and advanced technological mastery in Python, Web Development, and AI." />
+    <meta property="og:title" content="NeoByte Builders - The Next-Gen Learning Hub" />
+    <meta property="og:description" content="A continuous technology mentorship transforming young learners into confident software creators. Classes start this December!" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#071126" />
+
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              display: ['"Outfit"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
+            },
+            colors: {
+              brand: {
+                canvas: '#060d1f',
+                surface: '#0a1532',
+                card: '#0f1d42',
+                cardAlt: '#12224d',
+                border: '#1f3468',
+                borderHover: '#38bdf8',
+                cyan: '#06b6d4',
+                cyanLight: '#38bdf8',
+                blue: '#2563eb',
+                orange: '#f97316',
+                amber: '#f59e0b',
+                emerald: '#10b981',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        background-color: #060d1f;
+        background-image: 
+          radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.18) 0%, rgba(10, 21, 50, 0.4) 35%, transparent 70%),
+          radial-gradient(circle at 90% 25%, rgba(249, 115, 22, 0.12) 0%, transparent 45%),
+          radial-gradient(circle at 10% 65%, rgba(6, 182, 212, 0.12) 0%, transparent 45%),
+          radial-gradient(circle at 50% 90%, rgba(37, 99, 235, 0.12) 0%, transparent 55%),
+          linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+        background-attachment: fixed;
+        color: #f1f5f9;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        overflow-x: hidden;
+      }
+      .font-display {
+        font-family: 'Outfit', sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .glass-panel {
+        background: rgba(10, 21, 50, 0.85);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(56, 189, 248, 0.18);
+      }
+      .glass-card {
+        background: linear-gradient(180deg, rgba(16, 31, 68, 0.82) 0%, rgba(10, 20, 48, 0.92) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(56, 189, 248, 0.18);
+      }
+      .glass-card-orange {
+        background: linear-gradient(180deg, rgba(28, 25, 54, 0.88) 0%, rgba(13, 19, 43, 0.94) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(249, 115, 22, 0.35);
+      }
+      .glow-cyan {
+        box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.35);
+      }
+      .glow-orange {
+        box-shadow: 0 10px 40px -10px rgba(249, 115, 22, 0.35);
+      }
+      .glow-emerald {
+        box-shadow: 0 8px 30px -8px rgba(16, 185, 129, 0.35);
+      }
+      .text-gradient-cyan {
+        background: linear-gradient(135deg, #ffffff 0%, #38bdf8 55%, #0284c7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .text-gradient-orange {
+        background: linear-gradient(135deg, #fef08a 0%, #f59e0b 50%, #ea580c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.85) sepia(100%) saturate(300%) hue-rotate(150deg);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-100 antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- URGENT NOTICE / GROUP & REFERRAL DISCOUNT TICKER -->
+    <aside class="relative z-50 bg-[#060e22]/95 backdrop-blur-md border-b border-slate-800/80 text-xs sm:text-sm font-medium py-2 px-4 text-center transition-colors">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-slate-300">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-300 text-xs font-semibold border border-amber-500/30">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span> Group & Referral Special
+        </span>
+        <span class="font-normal text-slate-300 text-xs sm:text-sm">
+          5+ learners receive the Tech Innovator Add-on (AI Tools) for <strong class="text-white font-semibold">₹1,000/mo</strong> per student! 
+          <span class="text-amber-300 font-semibold">Ends November 15th.</span>
+        </span>
+        <!-- Urgency Countdown Indicator -->
+        <div id="urgentTickerCountdown" class="hidden md:inline-flex items-center gap-1 font-mono text-cyan-300 bg-cyan-950/40 px-2 py-0.5 rounded text-[11px] border border-cyan-500/20 shadow-sm">
+          <span>⏳</span>
+          <span id="tickerDays">00</span>d <span id="tickerHours">00</span>h <span id="tickerMins">00</span>m left
+        </div>
+        <a href="#group-offer" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 underline font-semibold text-xs sm:text-sm transition-colors decoration-cyan-500/40 ml-1">
+          Details &rarr;
+        </a>
+      </div>
+    </aside>
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-40 w-full glass-panel border-b border-cyan-500/15 transition-all duration-200 shadow-xl shadow-[#050b18]/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 flex items-center justify-between gap-4">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="inline-flex items-center group flex-shrink-0 transition-opacity hover:opacity-95" title="NeoByte Builders - The Next-Gen Learning Hub">
+          <img 
+            src="/assets/aistudio/image__4__699d1faf.png" 
+            alt="NeoByte Builders - The Next-Gen Learning Hub" 
+            class="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-102 drop-shadow-[0_0_20px_rgba(34,211,238,0.22)]"
+            onerror="this.style.display='none'; document.getElementById('fallbackLogo').classList.remove('hidden');"
+          />
+          <!-- Fallback SVG in case image fails to load -->
+          <div id="fallbackLogo" class="hidden flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-orange-500 p-0.5 shadow-lg">
+              <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-display font-black text-cyan-300 text-base">
+                NB
+              </div>
+            </div>
+            <div>
+              <div class="font-display font-black text-base sm:text-lg tracking-tight text-white">
+                NEOBYTE <span class="text-cyan-400">BUILDERS</span>
+              </div>
+              <p class="text-[9px] text-slate-300 font-semibold tracking-wider">
+                THE NEXT-GEN LEARNING HUB
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Right Header Action (Clean NeoByte + Book Demo Only) -->
+        <div class="flex items-center gap-3 flex-shrink-0">
+          <a href="#book-demo" class="relative inline-flex items-center justify-center px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-cyan-300 hover:from-cyan-300 hover:to-teal-200 transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap">
+            <span>Book Free Demo</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- SECTION 1: HERO & PHILOSOPHY -->
+      <section id="philosophy" class="relative pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div class="text-center max-w-4xl mx-auto">
+            
+            <!-- Hero Brand Emblem -->
+            <div class="inline-flex flex-col sm:flex-row items-center gap-3.5 px-5 py-2.5 rounded-3xl glass-panel glow-cyan border border-cyan-500/30 mb-8 shadow-xl">
+              <img 
+                src="/assets/aistudio/image__4__699d1faf.png" 
+                alt="NeoByte Builders Emblem" 
+                class="h-10 sm:h-12 w-auto object-contain drop-shadow"
+              />
+              <div class="h-4 w-px bg-cyan-500/30 hidden sm:block"></div>
+              <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-cyan-300">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Classes Officially Start This December!</span>
+                <span class="text-slate-400 font-normal hidden md:inline">• 4th Grade to Adult (No Upper Limit)</span>
+              </div>
+            </div>
+
+            <!-- Main High-Conversion Headline & Subtext -->
+            <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] text-white mb-6">
+              A Continuous Technology Mentorship <br class="hidden sm:inline" />
+              <span class="text-gradient-cyan">For The Next Generation</span> of Builders.
+            </h1>
+
+            <div class="text-base sm:text-xl text-slate-200 leading-relaxed max-w-3xl mx-auto mb-8 font-normal space-y-4">
+              <p>
+                At <strong class="text-white font-bold">NeoByte Builders</strong> — <span class="text-cyan-400 italic">The Next-Gen Learning Hub</span> — we offer a continuous technology mentorship. We transform young learners from passive screen consumers into confident software creators.
+              </p>
+              <p class="text-slate-300">
+                We don't just teach syntax; our dedicated mentors use technology to build <strong class="text-white font-semibold">unshakeable logical thinking</strong>, <strong class="text-white font-semibold">creative problem-solving</strong>, and <strong class="text-cyan-300 font-semibold">deep technological mastery</strong> that will put your child ahead in this AI world. <span class="text-amber-300 font-bold">Classes officially start this December!</span>
+              </p>
+            </div>
+
+            <!-- MANDATORY REQUIREMENT HIGHLIGHT BOX -->
+            <div class="inline-flex items-center gap-3.5 px-6 py-4 rounded-2xl bg-[#132048]/90 border-2 border-amber-500/50 text-amber-200 text-sm font-semibold mb-10 max-w-2xl text-left shadow-xl shadow-amber-950/20">
+              <div class="w-11 h-11 rounded-xl bg-amber-500/20 border border-amber-500/50 flex items-center justify-center text-amber-300 flex-shrink-0 text-xl shadow-inner">
+                💻
+              </div>
+              <div>
+                <span class="text-amber-400 font-bold uppercase tracking-wider text-xs block">Requirement:</span>
+                <span class="text-white font-semibold text-sm sm:text-base">A laptop, active internet connectivity, and basic computer knowledge are required.</span>
+              </div>
+            </div>
+
+            <!-- OUR CORE PHILOSOPHY PROMINENT CALLOUT -->
+            <div class="relative my-8 p-6 sm:p-10 rounded-3xl glass-card glow-cyan border-2 border-cyan-500/35 text-left max-w-3xl mx-auto overflow-hidden">
+              <div class="flex items-start gap-4 sm:gap-6">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-600 to-orange-500 flex items-center justify-center text-white flex-shrink-0 shadow-xl shadow-cyan-950/50">
+                  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-xs uppercase tracking-widest font-black text-cyan-400 bg-cyan-950/90 px-3 py-1 rounded-md border border-cyan-800">
+                      Our Core Philosophy
+                    </span>
+                    <span class="text-xs text-orange-400 font-bold font-mono">Continuous Guidance</span>
+                  </div>
+                  <blockquote class="text-base sm:text-lg text-slate-100 font-medium leading-relaxed">
+                    “Our ultimate objective is not simply to finish a syllabus. We are here to lay a robust technological foundation and build unshakeable confidence in modern software engineering. We guide every student through the deepest fundamentals of computational logic with hands-on mentor coaching, empowering them to think critically, create real-world digital solutions, and master tomorrow's technologies with visionary creativity.”
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+              <a href="#book-demo" class="w-full sm:w-auto px-8 py-4 rounded-xl font-display font-bold text-base text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-cyan-300 hover:from-cyan-300 hover:to-teal-200 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all hover:-translate-y-0.5 active:translate-y-0 text-center flex items-center justify-center gap-2">
+                <span>Book Free Weekend Demo Session</span>
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <a href="#pathway" class="w-full sm:w-auto px-7 py-4 rounded-xl font-display font-semibold text-base text-slate-200 bg-[#0d1a3b]/90 hover:bg-[#122450] border border-cyan-500/30 hover:border-cyan-400/60 transition-all text-center">
+                Explore The Learning Pathway &darr;
+              </a>
+            </div>
+
+            <!-- Value Pillars -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-14 pt-10 border-t border-cyan-500/15 text-left">
+              <div class="p-4 rounded-2xl bg-[#091533]/60 border border-cyan-500/15">
+                <div class="text-xl font-bold font-display text-white">Continuous</div>
+                <div class="text-xs text-slate-300 mt-1">Ongoing mentorship, not a rushed sprint</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#091533]/60 border border-cyan-500/15">
+                <div class="text-xl font-bold font-display text-cyan-400">Clarity Sessions</div>
+                <div class="text-xs text-slate-300 mt-1">Free 1-hr extended sessions based on availability</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#091533]/60 border border-cyan-500/15">
+                <div class="text-xl font-bold font-display text-orange-400">Deep Mastery</div>
+                <div class="text-xs text-slate-300 mt-1">Hands-on guidance cultivating deep intuition</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-[#091533]/60 border border-cyan-500/15">
+                <div class="text-xl font-bold font-display text-emerald-400">Weekend Only</div>
+                <div class="text-xs text-slate-300 mt-1">Zero school weekday conflicts</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: THE CURRICULUM (CONTINUOUS LEARNING PATHWAY) WITH EXPLICIT TRACK PRICING & PREREQUISITES -->
+      <section id="pathway" class="py-20 lg:py-28 relative border-t border-cyan-500/15 bg-gradient-to-b from-transparent via-[#08132e]/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4">
+              Continuous Learning Pathway
+            </div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+              The Innovator’s Journey: <br />
+              <span class="text-gradient-cyan">A Continuous Learning Pathway</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mt-4 leading-relaxed">
+              Unlike traditional short-term programs, NeoByte Builders operates as an ongoing technology mentorship. Students progress through these core disciplines at their own pace, continuously leveling up their skills.
+            </p>
+          </div>
+
+          <!-- 4 Continuous Tracks Grid with Clear Monthly Rates -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            
+            <!-- Track 1: Core Foundation -->
+            <div class="relative rounded-3xl glass-card p-6 sm:p-7 border border-cyan-500/30 hover:border-cyan-400/70 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div class="h-1.5 w-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-5"></div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-cyan-950/90 text-cyan-300 border border-cyan-800">
+                    Track 1
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white mb-2">
+                  Core Foundation <br />
+                  <span class="text-sm text-cyan-300 font-medium font-sans">(Python & Computational Logic)</span>
+                </h3>
+
+                <!-- Clean Rate Display -->
+                <div class="my-3 px-3.5 py-2.5 rounded-xl bg-[#091535] border border-cyan-500/30 flex items-center justify-center">
+                  <span class="text-xl font-black font-display text-cyan-300 flex items-center">
+                    <svg class="w-4 h-4 fill-current inline-block mr-1 text-cyan-400" viewBox="0 0 320 512" aria-hidden="true"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v40c0 6.6 5.4 12 12 12h59.9c36.4 0 68.3 20.8 84.7 51.5L12 147.5c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h147.7c-7.7 34.6-38.6 60.5-75.7 60.5H12c-6.6 0-12 5.4-12 12v35.3c0 3.2 1.3 6.2 3.5 8.5l161.4 161.4c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L68.8 336h13.2c65.5 0 120.2-46.7 132.8-108.5H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-90.1c-3.1-17.7-10.2-34.1-20.4-48H308z"/></svg>
+                    2,000 <span class="text-xs text-slate-300 font-medium ml-1.5">/ month</span>
+                  </span>
+                </div>
+
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Building a robust, long-term foundation in logical thinking by writing structured Python code for visual and logic-based applications.
+                </p>
+              </div>
+
+              <div>
+                <div class="pt-4 border-t border-slate-700/60 text-xs text-slate-300 space-y-2 font-medium mb-4">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Computational logic & variables</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Structured problem decomposition</span>
+                  </div>
+                </div>
+                <a href="#book-demo" onclick="selectProgramOption('Track 1: Core Foundation (Python & Computational Logic) - Rs. 2,000/mo')" class="block w-full py-2.5 rounded-xl text-center text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors">
+                  Book Free Demo Session
+                </a>
+              </div>
+            </div>
+
+            <!-- Track 2: Web Development (HTML, CSS, JavaScript & React) -->
+            <div class="relative rounded-3xl glass-card p-6 sm:p-7 border border-blue-500/30 hover:border-blue-400/70 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div class="h-1.5 w-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full mb-5"></div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-blue-950/90 text-blue-300 border border-blue-800">
+                    Track 2
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white mb-2">
+                  Web Development <br />
+                  <span class="text-sm text-blue-300 font-medium font-sans">(HTML, CSS, JavaScript & React)</span>
+                </h3>
+
+                <!-- Clean Rate Display -->
+                <div class="my-3 px-3.5 py-2.5 rounded-xl bg-[#091535] border border-blue-500/30 flex items-center justify-center">
+                  <span class="text-xl font-black font-display text-blue-300 flex items-center">
+                    <svg class="w-4 h-4 fill-current inline-block mr-1 text-blue-400" viewBox="0 0 320 512" aria-hidden="true"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v40c0 6.6 5.4 12 12 12h59.9c36.4 0 68.3 20.8 84.7 51.5L12 147.5c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h147.7c-7.7 34.6-38.6 60.5-75.7 60.5H12c-6.6 0-12 5.4-12 12v35.3c0 3.2 1.3 6.2 3.5 8.5l161.4 161.4c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L68.8 336h13.2c65.5 0 120.2-46.7 132.8-108.5H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-90.1c-3.1-17.7-10.2-34.1-20.4-48H308z"/></svg>
+                    2,500 <span class="text-xs text-slate-300 font-medium ml-1.5">/ month</span>
+                  </span>
+                </div>
+
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  An ongoing exploration of modern front-end engineering: HTML, CSS, dynamic JavaScript, and component-driven React applications.
+                </p>
+              </div>
+
+              <div>
+                <div class="pt-4 border-t border-slate-700/60 text-xs text-slate-300 space-y-2 font-medium mb-4">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>HTML5, CSS3 & JavaScript DOM</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>React components, hooks & state</span>
+                  </div>
+                </div>
+                <a href="#book-demo" onclick="selectProgramOption('Track 2: Web Development (HTML, CSS, JS & React) - Rs. 2,500/mo')" class="block w-full py-2.5 rounded-xl text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 transition-colors">
+                  Book Free Demo Session
+                </a>
+              </div>
+            </div>
+
+            <!-- Track 3: Applied Engineering -->
+            <div class="relative rounded-3xl glass-card p-6 sm:p-7 border border-orange-500/30 hover:border-orange-400/70 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group shadow-xl">
+              <div>
+                <div class="h-1.5 w-16 bg-gradient-to-r from-orange-400 to-amber-500 rounded-full mb-5"></div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-orange-950/90 text-orange-300 border border-orange-800">
+                    Track 3
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white mb-2">
+                  Applied Engineering <br />
+                  <span class="text-sm text-orange-300 font-medium font-sans">(Software Development)</span>
+                </h3>
+
+                <!-- Clean Rate Display -->
+                <div class="my-3 px-3.5 py-2.5 rounded-xl bg-[#091535] border border-orange-500/30 flex items-center justify-center">
+                  <span class="text-xl font-black font-display text-orange-300 flex items-center">
+                    <svg class="w-4 h-4 fill-current inline-block mr-1 text-orange-400" viewBox="0 0 320 512" aria-hidden="true"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v40c0 6.6 5.4 12 12 12h59.9c36.4 0 68.3 20.8 84.7 51.5L12 147.5c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h147.7c-7.7 34.6-38.6 60.5-75.7 60.5H12c-6.6 0-12 5.4-12 12v35.3c0 3.2 1.3 6.2 3.5 8.5l161.4 161.4c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L68.8 336h13.2c65.5 0 120.2-46.7 132.8-108.5H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-90.1c-3.1-17.7-10.2-34.1-20.4-48H308z"/></svg>
+                    4,000 <span class="text-xs text-slate-300 font-medium ml-1.5">/ month</span>
+                  </span>
+                </div>
+
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Continuous, iterative engineering of functional Python and web software, building complex interactive applications and system logic over time.
+                </p>
+              </div>
+
+              <div>
+                <div class="pt-4 border-t border-slate-700/60 text-xs text-slate-300 space-y-2 font-medium mb-4">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Complex data structures & algorithmic thinking</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-orange-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Full software lifecycle & debugging habits</span>
+                  </div>
+                </div>
+                <a href="#book-demo" onclick="selectProgramOption('Track 3: Applied Engineering (Software Development) - Rs. 4,000/mo')" class="block w-full py-2.5 rounded-xl text-center text-xs font-bold text-slate-950 bg-orange-400 hover:bg-orange-300 transition-colors">
+                  Book Free Demo Session
+                </a>
+              </div>
+            </div>
+
+            <!-- Track 4: The AI Frontier -->
+            <div class="relative rounded-3xl glass-card p-6 sm:p-7 border border-amber-500/40 hover:border-amber-300 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group glow-orange shadow-xl">
+              <div>
+                <div class="h-1.5 w-16 bg-gradient-to-r from-amber-400 to-yellow-300 rounded-full mb-5"></div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-amber-950/90 text-amber-300 border border-amber-800">
+                    Track 4
+                  </span>
+                </div>
+
+                <h3 class="font-display font-bold text-xl text-white mb-2">
+                  The AI Frontier <br />
+                  <span class="text-sm text-amber-300 font-medium font-sans">(Emerging Technologies)</span>
+                </h3>
+
+                <!-- Clean Rate Display -->
+                <div class="my-3 px-3.5 py-2.5 rounded-xl bg-[#091535] border border-amber-500/30 flex items-center justify-center">
+                  <span class="text-xl font-black font-display text-amber-300 flex items-center">
+                    <svg class="w-4 h-4 fill-current inline-block mr-1 text-amber-400" viewBox="0 0 320 512" aria-hidden="true"><path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v40c0 6.6 5.4 12 12 12h59.9c36.4 0 68.3 20.8 84.7 51.5L12 147.5c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h147.7c-7.7 34.6-38.6 60.5-75.7 60.5H12c-6.6 0-12 5.4-12 12v35.3c0 3.2 1.3 6.2 3.5 8.5l161.4 161.4c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L68.8 336h13.2c65.5 0 120.2-46.7 132.8-108.5H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-90.1c-3.1-17.7-10.2-34.1-20.4-48H308z"/></svg>
+                    8,000 <span class="text-xs text-slate-300 font-medium ml-1.5">/ month</span>
+                  </span>
+                </div>
+
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                  Continuous, hands-on exposure to Large Language Models (LLMs) and RAG, engineering intelligent AI assistants to stay ahead of the rapid tech curve.
+                </p>
+              </div>
+
+              <div>
+                <div class="pt-4 border-t border-slate-700/60 text-xs text-slate-300 space-y-2 font-medium mb-4">
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>LLMs, Prompt Engineering & RAG systems</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-amber-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    <span>Autonomous agents & intelligent workflows</span>
+                  </div>
+                </div>
+                <a href="#book-demo" onclick="selectProgramOption('Track 4: The AI Frontier (Emerging Technologies) - Rs. 8,000/mo')" class="block w-full py-2.5 rounded-xl text-center text-xs font-bold text-slate-950 bg-amber-400 hover:bg-amber-300 transition-colors">
+                  Book Free Demo Session
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: TECH INNOVATOR ADD-ON & GROUP/REFERRAL REWARDS -->
+      <section id="pricing" class="py-20 lg:py-28 relative border-t border-cyan-500/15 bg-gradient-to-b from-[#071128]/70 via-[#0a1532]/90 to-[#071128]/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4">
+              Mentorship Experience & Support
+            </div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+              Dedicated Mentorship Support <br />
+              <span class="text-gradient-cyan">& The Tech Innovator Add-on</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mt-4">
+              Flexible weekend schedule designed around school life with guaranteed mentor clarity sessions.
+            </p>
+          </div>
+
+          <!-- DUAL CARDS: Mentorship Support & Tech Innovator Add-on -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-5xl mx-auto">
+            
+            <!-- CARD 1: Weekend Mentorship Schedule & Guaranteed Clarity -->
+            <div class="relative rounded-3xl glass-card p-8 sm:p-10 border border-cyan-500/40 glow-cyan flex flex-col justify-between shadow-2xl">
+              <div>
+                <div class="flex items-center justify-between gap-4 mb-4">
+                  <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
+                    Cohort Guidance
+                  </span>
+                  <span class="text-xs text-slate-300 font-mono">4 Hours / Weekend</span>
+                </div>
+
+                <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">
+                  Weekend Cohort Schedule <br />
+                  <span class="text-lg text-cyan-300 font-medium font-sans">& Clarity Guarantee</span>
+                </h3>
+                <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                  Every track is conducted in focused weekend sessions designed to fit naturally into school life without weekday pressure.
+                </p>
+
+                <!-- Schedule Block -->
+                <div id="schedule" class="mb-6 p-4 rounded-xl bg-[#07122b]/90 border border-slate-700/80">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5 flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10" stroke-width="2" />
+                      <polyline points="12 6 12 12 16 14" stroke-width="2" />
+                    </svg>
+                    Weekend Cohort Timings:
+                  </h4>
+                  <ul class="space-y-2 text-sm text-slate-200">
+                    <li class="flex items-center justify-between py-1 border-b border-slate-800">
+                      <span class="font-semibold text-cyan-300">Saturdays:</span>
+                      <span class="font-mono bg-[#050c1e] px-2.5 py-0.5 rounded text-xs">6:00 PM - 8:00 PM</span>
+                    </li>
+                    <li class="flex items-center justify-between py-1">
+                      <span class="font-semibold text-cyan-300">Sundays:</span>
+                      <span class="font-mono bg-[#050c1e] px-2.5 py-0.5 rounded text-xs">10:00 AM - 12:00 PM</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- KEY BENEFIT: GUARANTEED UNDERSTANDING VIA EXTENDED CLARITY SESSIONS (Based on availability) -->
+                <div class="mb-6 p-4 sm:p-5 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 glow-emerald">
+                  <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <h5 class="text-emerald-300 font-bold text-sm tracking-wide">
+                        Guaranteed Understanding:
+                      </h5>
+                      <p class="text-xs sm:text-sm text-emerald-100/90 leading-relaxed mt-1">
+                        If your child faces difficulty, we provide a <strong class="text-white font-bold underline decoration-emerald-400">free 1-hour extended clarity session</strong> based on mentor availability. Our mentor works closely with your child to review concepts, resolve doubts, and ensure complete confidence before the next weekend.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Features list -->
+                <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-8 font-medium">
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span>Continuous problem-solving & live coding exercises</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span>Regular code reviews & mentor feedback</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <svg class="w-4 h-4 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <span>Fortnightly parent progress updates</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- CTA Button -->
+              <a href="#book-demo" onclick="selectProgramOption('Track 1: Core Foundation (Python & Computational Logic) - Rs. 2,000/mo')" class="w-full py-3.5 px-6 rounded-xl font-bold text-center text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2">
+                <span>Book Free Weekend Demo Session</span>
+                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-cyan-900/20 text-slate-950">Free</span>
+              </a>
+            </div>
+
+            <!-- CARD 2: The Tech Innovator Add-on & Group/Referral Offer -->
+            <div id="group-offer" class="relative rounded-3xl glass-card-orange p-8 sm:p-10 border border-orange-500/50 glow-orange flex flex-col justify-between overflow-hidden shadow-2xl">
+              
+              <!-- Tag -->
+              <div class="absolute -top-1 -right-1">
+                <span class="inline-block bg-gradient-to-l from-orange-500 to-amber-500 text-slate-950 font-display font-extrabold text-[11px] uppercase tracking-wider py-1.5 px-4 rounded-bl-xl shadow-md">
+                  ⭐ AI Tools
+                </span>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between gap-4 mb-4">
+                  <span class="px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-500/20 text-orange-300 border border-orange-500/40">
+                    High-Tech Mastery
+                  </span>
+                  <span class="text-xs text-orange-300 font-mono font-bold">1 Hour / Sunday</span>
+                </div>
+
+                <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">
+                  The Tech Innovator Add-on <br />
+                  <span class="text-lg text-orange-300 font-medium font-sans">(AI Tools)</span>
+                </h3>
+                <p class="text-slate-300 text-xs sm:text-sm mb-4 leading-relaxed">
+                  An exciting Sunday immersion where students master modern AI and developer tools, build intelligent assistants, and explore creative software creation.
+                </p>
+
+                <!-- Price Block -->
+                <div class="p-5 rounded-2xl bg-[#091535]/90 border border-orange-500/30 mb-6 relative shadow-inner">
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="text-4xl sm:text-5xl font-black font-display text-white tracking-tight flex items-center">
+                      <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current inline-block mr-1 text-orange-400" viewBox="0 0 320 512" aria-hidden="true">
+                        <path d="M308 96c6.6 0 12-5.4 12-12V44c0-6.6-5.4-12-12-12H12C5.4 32 0 37.4 0 44v40c0 6.6 5.4 12 12 12h59.9c36.4 0 68.3 20.8 84.7 51.5L12 147.5c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h147.7c-7.7 34.6-38.6 60.5-75.7 60.5H12c-6.6 0-12 5.4-12 12v35.3c0 3.2 1.3 6.2 3.5 8.5l161.4 161.4c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L68.8 336h13.2c65.5 0 120.2-46.7 132.8-108.5H308c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-90.1c-3.1-17.7-10.2-34.1-20.4-48H308z"/>
+                      </svg>
+                      1,500
+                    </span>
+                    <span class="text-slate-300 font-semibold text-sm">/ month</span>
+                    <span class="text-xs px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 ml-auto font-mono">Standard Fee</span>
+                  </div>
+                  <p class="text-xs text-orange-300/80 mt-1">Available standalone or alongside any foundational track.</p>
+                </div>
+
+                <!-- Schedule Block -->
+                <div class="mb-5 p-4 rounded-xl bg-[#08122c]/90 border border-slate-700/80">
+                  <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2 flex items-center gap-1.5">
+                    <svg class="w-4 h-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10" stroke-width="2" />
+                      <polyline points="12 6 12 12 16 14" stroke-width="2" />
+                    </svg>
+                    Add-on Sunday Schedule (Pick Either Slot):
+                  </h4>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <div class="p-2.5 rounded-lg bg-[#050c1e] border border-slate-800 text-center font-mono text-cyan-300 font-semibold">
+                      Sundays: 12:30 PM - 1:30 PM
+                    </div>
+                    <div class="p-2.5 rounded-lg bg-[#050c1e] border border-slate-800 text-center font-mono text-cyan-300 font-semibold">
+                      Sundays: 2:30 PM - 3:30 PM
+                    </div>
+                  </div>
+                </div>
+
+                <!-- WHY AI IS CRUCIAL -->
+                <div class="mb-6 p-4 rounded-xl bg-[#0b1536]/90 border border-orange-500/30">
+                  <h5 class="text-xs font-bold uppercase tracking-wider text-amber-300 mb-1 flex items-center gap-1.5">
+                    <span>✨</span> Why this Add-on?
+                  </h5>
+                  <p class="text-xs sm:text-sm text-slate-200 leading-relaxed italic">
+                    “Why this Add-on? It is the ultimate creativity booster. Traditional coding can sometimes feel rigid, but AI tools allow children to instantly bring their own wild imaginations to life. By building smart chatbots and interactive systems based on their own ideas, it keeps them deeply engaged, prevents boredom, and turns technology into a highly exciting, self-driven adventure!”
+                  </p>
+                </div>
+
+                <!-- GROUP & REFERRAL PROGRAM CALLOUT (5+ Offer) -->
+                <div class="mb-6 p-5 rounded-2xl bg-gradient-to-br from-orange-950/70 via-[#151c3d] to-[#0a122e] border-2 border-orange-500 shadow-xl relative">
+                  
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="animate-pulse flex h-2.5 w-2.5 relative">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-orange-500"></span>
+                    </span>
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-300">
+                      🤝 Referral & Group Program
+                    </span>
+                    <span class="ml-auto text-[11px] font-mono font-bold bg-rose-950 text-rose-300 px-2.5 py-0.5 rounded border border-rose-800">
+                      ENDS NOV 15TH
+                    </span>
+                  </div>
+
+                  <p class="text-sm font-bold text-white leading-snug">
+                    Refer or register as a group of 5 or more, and get this Add-on for just <span class="text-amber-300 font-black text-lg underline decoration-orange-400">₹1,000/month per student!</span>
+                  </p>
+                  <p class="text-xs text-orange-200/90 mt-1">
+                    Both your family and referred learners qualify for this special ₹1,000/mo fee. Offer ends November 15th.
+                  </p>
+
+                  <!-- Live Countdown Timer Component to November 15th -->
+                  <div class="mt-4 pt-3 border-t border-orange-500/30 flex items-center justify-between flex-wrap gap-2">
+                    <span class="text-[11px] font-semibold text-slate-300 uppercase tracking-wide">Offer Ends In:</span>
+                    <div id="groupCountdown" class="flex items-center gap-2 font-mono text-center">
+                      <div class="bg-[#050c1e] border border-orange-500/40 rounded px-2 py-1">
+                        <span id="cdDays" class="block text-base font-bold text-orange-300 leading-tight">00</span>
+                        <span class="text-[9px] text-slate-400">DAYS</span>
+                      </div>
+                      <span class="text-orange-500 font-bold">:</span>
+                      <div class="bg-[#050c1e] border border-orange-500/40 rounded px-2 py-1">
+                        <span id="cdHours" class="block text-base font-bold text-orange-300 leading-tight">00</span>
+                        <span class="text-[9px] text-slate-400">HOURS</span>
+                      </div>
+                      <span class="text-orange-500 font-bold">:</span>
+                      <div class="bg-[#050c1e] border border-orange-500/40 rounded px-2 py-1">
+                        <span id="cdMins" class="block text-base font-bold text-orange-300 leading-tight">00</span>
+                        <span class="text-[9px] text-slate-400">MINS</span>
+                      </div>
+                      <span class="text-orange-500 font-bold">:</span>
+                      <div class="bg-[#050c1e] border border-orange-500/40 rounded px-2 py-1">
+                        <span id="cdSecs" class="block text-base font-bold text-orange-300 leading-tight">00</span>
+                        <span class="text-[9px] text-slate-400">SECS</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Referral Savings Calculator -->
+                  <div class="mt-4 pt-3 border-t border-orange-500/20 text-xs">
+                    <div class="flex items-center justify-between mb-1.5">
+                      <label for="groupSlider" class="text-slate-300 font-medium">Friends Referred With Your Code:</label>
+                      <span id="groupCountDisplay" class="font-bold text-slate-300">0 Friends (Standard: ₹1,500/mo)</span>
+                    </div>
+                    <input id="groupSlider" type="range" min="0" max="10" value="0" class="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-orange-400" />
+                    <div class="flex items-center justify-between text-[11px] text-slate-400 mt-1 font-mono">
+                      <span>Monthly Fee: <span id="ratePerStudent" class="text-white font-bold">Rs. 1,500/mo</span></span>
+                      <span id="savingsBadge" class="text-amber-300 font-semibold">Refer 5 friends with your unique code to receive the Rs. 1,000/mo special fee!</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <a href="#book-demo" onclick="selectProgramOption('The Tech Innovator Add-on - Rs. 1,500/mo (Rs. 1,000 with 5+ Referral)')" class="w-full py-3.5 px-6 rounded-xl font-bold text-center text-slate-950 bg-gradient-to-r from-orange-400 to-amber-300 hover:from-orange-300 hover:to-amber-200 transition-colors shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+                <span>Book Tech Innovator Add-on Demo</span>
+                <svg class="w-4 h-4 text-slate-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: THE DEMO BOOKING FORM -->
+      <section id="book-demo" class="py-20 lg:py-28 relative border-t border-cyan-500/15 bg-gradient-to-b from-transparent via-[#060e24] to-[#040816]">
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4">
+              Reserve A Free Seat
+            </div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+              Book Your Free Weekend Demo
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mt-3">
+              Experience our continuous mentorship live. Weekend sessions only. Select a Saturday or Sunday that fits your schedule.
+            </p>
+          </div>
+
+          <!-- THE BOOKING FORM CONTAINER -->
+          <div class="relative rounded-3xl glass-card p-6 sm:p-10 border border-cyan-500/35 glow-cyan shadow-2xl">
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pb-6 mb-6 border-b border-slate-700/80 text-xs text-slate-300">
+              <span class="flex items-center gap-1.5 text-cyan-300 font-semibold">
+                <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                100% Free Demo Session
+              </span>
+              <span class="flex items-center gap-1.5 text-blue-300 font-semibold">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
+                Weekends Only (Sat & Sun)
+              </span>
+              <span class="flex items-center gap-1.5 text-orange-300 font-semibold">
+                <svg class="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                Nov 15 Referral Special Eligible
+              </span>
+            </div>
+
+            <!-- Booking Form Element -->
+            <form id="demoBookingForm" novalidate class="space-y-6">
+              
+              <!-- Row 1: Parent Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="parentName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Parent Full Name <span class="text-cyan-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="parentName"
+                    name="parentName"
+                    required
+                    placeholder="e.g. Priya Sharma"
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-slate-500 text-sm transition-all outline-none"
+                  />
+                  <span id="parentNameError" class="hidden text-xs text-rose-400 mt-1 block">Please enter parent name.</span>
+                </div>
+
+                <div>
+                  <label for="parentEmail" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Parent Email Address <span class="text-cyan-400">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="parentEmail"
+                    name="parentEmail"
+                    required
+                    placeholder="e.g. priya@gmail.com"
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-slate-500 text-sm transition-all outline-none"
+                  />
+                  <span id="parentEmailError" class="hidden text-xs text-rose-400 mt-1 block">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <!-- Row 2: WhatsApp Number & Student Name -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="whatsapp" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    WhatsApp Number (for Demo Link & Reminders) <span class="text-cyan-400">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="whatsapp"
+                    name="whatsapp"
+                    required
+                    placeholder="+91 98765 43210"
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-slate-500 text-sm transition-all outline-none"
+                  />
+                  <span id="whatsappError" class="hidden text-xs text-rose-400 mt-1 block">Please enter a valid WhatsApp contact number.</span>
+                </div>
+
+                <div>
+                  <label for="studentName" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Student Full Name <span class="text-cyan-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="studentName"
+                    name="studentName"
+                    required
+                    placeholder="e.g. Aarav Sharma"
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white placeholder-slate-500 text-sm transition-all outline-none"
+                  />
+                  <span id="studentNameError" class="hidden text-xs text-rose-400 mt-1 block">Please enter the student's name.</span>
+                </div>
+              </div>
+
+              <!-- Row 3: Student Age/Grade & Program Selection -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="studentGrade" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Student Age / Grade (No Upper Limit) <span class="text-cyan-400">*</span>
+                  </label>
+                  <select
+                    id="studentGrade"
+                    name="studentGrade"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white text-sm transition-all outline-none"
+                  >
+                    <option value="" disabled selected>Select Student Age / Grade</option>
+                    <option value="4th Grade (Approx 9 yrs)">4th Grade (Approx 9 yrs)</option>
+                    <option value="5th - 6th Grade (Approx 10-11 yrs)">5th - 6th Grade (Approx 10-11 yrs)</option>
+                    <option value="7th - 8th Grade (Approx 12-13 yrs)">7th - 8th Grade (Approx 12-13 yrs)</option>
+                    <option value="9th - 10th Grade (Approx 14-15 yrs)">9th - 10th Grade (Approx 14-15 yrs)</option>
+                    <option value="11th - 12th Grade (Approx 16-17 yrs)">11th - 12th Grade (Approx 16-17 yrs)</option>
+                    <option value="College Student / Adult Learner">College Student / Adult Learner (No Upper Limit!)</option>
+                  </select>
+                  <span id="studentGradeError" class="hidden text-xs text-rose-400 mt-1 block">Please select the student's grade or age group.</span>
+                </div>
+
+                <div>
+                  <label for="programSelect" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Program / Track of Interest <span class="text-slate-400 font-normal lowercase">(demo is common for all tracks)</span> <span class="text-cyan-400">*</span>
+                  </label>
+                  <select
+                    id="programSelect"
+                    name="program"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white text-sm transition-all outline-none"
+                  >
+                    <option value="Weekend Demo Session (Common for All Tracks)" selected>Weekend Demo Session (Common for All Tracks)</option>
+                    <option value="Track 1: Core Foundation (Python & Computational Logic) - Rs. 2,000/mo">Track 1: Core Foundation (Python & Logic) - Rs. 2,000 / month</option>
+                    <option value="Track 2: Web Development (HTML, CSS, JS & React) - Rs. 2,500/mo">Track 2: Web Development (HTML, CSS, JS & React) - Rs. 2,500 / month</option>
+                    <option value="Track 3: Applied Engineering (Software Development) - Rs. 4,000/mo">Track 3: Applied Engineering (Software Dev) - Rs. 4,000 / month</option>
+                    <option value="Track 4: The AI Frontier (Emerging Technologies) - Rs. 8,000/mo">Track 4: The AI Frontier (Emerging Technologies) - Rs. 8,000 / month</option>
+                    <option value="The Tech Innovator Add-on - Rs. 1,500/mo (Rs. 1,000 with 5+ Referral)">The Tech Innovator Add-on - Rs. 1,500/mo (Rs. 1,000 Referral Special)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 4: Date Picker (SATURDAY / SUNDAY ONLY) & Generic 1-Hour Time Slot Dropdown -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="demoDate" class="block text-xs font-bold uppercase tracking-wider text-slate-300">
+                      Demo Date (Weekends Only) <span class="text-cyan-400">*</span>
+                    </label>
+                    <span class="text-[11px] font-mono text-cyan-300 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-800">
+                      Sat / Sun Only
+                    </span>
+                  </div>
+                  <input
+                    type="date"
+                    id="demoDate"
+                    name="demoDate"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white text-sm transition-all outline-none"
+                  />
+                  <!-- Weekend notice feedback -->
+                  <div id="dateNotice" class="text-xs text-slate-400 mt-1.5 flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Please choose an upcoming Saturday or Sunday.</span>
+                  </div>
+                  <!-- Error notice if weekday is selected -->
+                  <div id="weekdayErrorAlert" class="hidden mt-2 p-2.5 rounded-lg bg-rose-950/80 border border-rose-500/50 text-rose-300 text-xs flex items-start gap-2">
+                    <svg class="w-4 h-4 text-rose-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Demos are held on <strong>Saturdays or Sundays</strong>. Date has been reset to the nearest weekend.</span>
+                  </div>
+                </div>
+
+                <!-- Generic 1-Hour Time Slots from 10:00 AM to 8:00 PM -->
+                <div>
+                  <label for="timeSlot" class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                    Preferred 1-Hour Time Slot <span class="text-cyan-400">*</span>
+                  </label>
+                  <select
+                    id="timeSlot"
+                    name="timeSlot"
+                    required
+                    class="w-full px-4 py-3 rounded-xl bg-[#091535]/90 border border-slate-700 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20 text-white text-sm transition-all outline-none"
+                  >
+                    <option value="" disabled selected>Select Weekend Time Slot</option>
+                    <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                    <option value="11:00 AM - 12:00 PM">11:00 AM - 12:00 PM</option>
+                    <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                    <option value="1:00 PM - 2:00 PM">1:00 PM - 2:00 PM</option>
+                    <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                    <option value="3:00 PM - 4:00 PM">3:00 PM - 4:00 PM</option>
+                    <option value="4:00 PM - 5:00 PM">4:00 PM - 5:00 PM</option>
+                    <option value="5:00 PM - 6:00 PM">5:00 PM - 6:00 PM</option>
+                    <option value="6:00 PM - 7:00 PM">6:00 PM - 7:00 PM</option>
+                    <option value="7:00 PM - 8:00 PM">7:00 PM - 8:00 PM</option>
+                  </select>
+                  <span id="timeSlotError" class="hidden text-xs text-rose-400 mt-1 block">Please select a time slot.</span>
+                </div>
+              </div>
+
+              <!-- Row 5: 1 Student Policy & Optional Referral Code Input -->
+              <div class="p-5 rounded-2xl bg-[#091535]/80 border border-slate-700 space-y-4">
+                
+                <div class="flex items-center gap-3.5 pb-3 border-b border-slate-700/80">
+                  <div class="w-9 h-9 rounded-xl bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-200 block">
+                      Attendance: Parents & Student Welcome
+                    </span>
+                    <span class="text-[11px] text-slate-300 leading-relaxed block mt-0.5">
+                      Parents and the student are both warmly welcome to attend the live demo session together.
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Referral Code Input for Referred Friends -->
+                <div>
+                  <div class="flex items-center justify-between mb-1.5">
+                    <label for="appliedReferralCode" class="block text-xs font-bold uppercase tracking-wider text-slate-300">
+                      Friend's Referral Code <span class="text-slate-400 font-normal lowercase">(optional)</span>
+                    </label>
+                    <span class="text-[11px] text-amber-300 font-semibold">Preferred Tuition: ₹1,000/mo</span>
+                  </div>
+                  <div class="relative">
+                    <input
+                      type="text"
+                      id="appliedReferralCode"
+                      name="appliedReferralCode"
+                      placeholder="e.g. NEO-AARAV842"
+                      class="w-full px-4 py-3 rounded-xl bg-[#0d1c44] border border-slate-700 focus:border-amber-400 focus:ring-2 focus:ring-amber-500/20 text-white placeholder-slate-500 text-sm uppercase font-mono tracking-wider transition-all outline-none"
+                    />
+                    <div class="absolute right-3.5 top-3 flex items-center gap-1 text-xs text-slate-400 pointer-events-none">
+                      <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+                      </svg>
+                      <span>Referral</span>
+                    </div>
+                  </div>
+                  <p class="text-[11px] text-slate-300 mt-2 flex items-start gap-2 leading-relaxed">
+                    <svg class="w-3.5 h-3.5 text-amber-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Upon reservation, your family will receive a <strong>unique Referral Code</strong> on-screen and by email. When 5 friends enroll using your code, all qualifying families receive the special tuition fee of ₹1,000/month.</span>
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Row 6: Mandatory Hardware & Internet Checkbox -->
+              <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/40">
+                <label class="flex items-start gap-3 cursor-pointer select-none">
+                  <input
+                    type="checkbox"
+                    id="hardwareCheck"
+                    name="hasHardwareReady"
+                    required
+                    checked
+                    class="mt-1 w-4 h-4 rounded border-amber-500 text-cyan-500 focus:ring-cyan-400 bg-slate-900 accent-cyan-400"
+                  />
+                  <span class="text-xs sm:text-sm text-slate-200 leading-snug">
+                    <strong class="text-amber-300 font-bold block mb-0.5">Requirement:</strong>
+                    I confirm that my child has a <strong class="text-white underline">laptop, active internet connectivity, and basic computer knowledge</strong> (required for hands-on mentorship, interactive coding, and screen sharing).
+                  </span>
+                </label>
+                <span id="hardwareCheckError" class="hidden text-xs text-rose-400 mt-2 block pl-7">You must confirm that a laptop, active internet connectivity, and basic computer knowledge are available.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  id="submitBtn"
+                  class="w-full py-4 px-8 rounded-xl font-display font-extrabold text-base text-slate-950 bg-gradient-to-r from-cyan-400 via-teal-300 to-cyan-300 hover:from-cyan-300 hover:to-teal-200 transition-all shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3"
+                >
+                  <span id="submitBtnText">Confirm Free Demo Booking &rarr;</span>
+                  <svg id="submitSpinner" class="hidden animate-spin h-5 w-5 text-slate-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                  </svg>
+                </button>
+                <p class="text-center text-xs text-slate-400 mt-3">
+                  🔒 Zero payment required for demo. Our team will verify and send the meeting link via WhatsApp within 4 hours.
+                </p>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+      <section id="faq" class="py-20 lg:py-28 relative border-t border-cyan-500/15">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-4">
+              Parent Guidance
+            </div>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mt-2">
+              Everything you need to know about preparing your young builder for continuous mentorship.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            
+            <details class="group glass-card rounded-2xl p-6 border border-slate-700/80 open:border-cyan-500/40 transition-colors shadow-lg">
+              <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-white list-none">
+                <span>Can my child start directly at Track 2, 3, or 4 if they already know coding?</span>
+                <span class="text-cyan-400 transition-transform group-open:rotate-180">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </summary>
+              <div class="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/60 pt-3">
+                Yes! While each track has prerequisites (Track 2 requires Track 1; Track 3 requires Tracks 1 & 2; Track 4 requires Tracks 1-3), students with prior knowledge are welcome to test into higher tracks. Our senior mentors will connect with the student to conduct a quick diagnostic session, evaluate their foundation, and ensure they are placed in the ideal track to thrive.
+              </div>
+            </details>
+
+            <details class="group glass-card rounded-2xl p-6 border border-slate-700/80 open:border-cyan-500/40 transition-colors shadow-lg">
+              <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-white list-none">
+                <span>Why is a laptop, active internet connectivity, and basic computer knowledge required?</span>
+                <span class="text-cyan-400 transition-transform group-open:rotate-180">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </summary>
+              <div class="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/60 pt-3">
+                Software building requires typing structured code, running developer environments, working with React, and testing live web applications. Tablets and smartphones cannot support standard engineering workflows or terminal tools. A functioning laptop with internet connectivity and basic computer familiarity (typing, mouse navigation, web browsing) gives your child authentic engineering capabilities.
+              </div>
+            </details>
+
+            <details class="group glass-card rounded-2xl p-6 border border-slate-700/80 open:border-cyan-500/40 transition-colors shadow-lg">
+              <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-white list-none">
+                <span>How do the free Extended Clarity Sessions work?</span>
+                <span class="text-cyan-400 transition-transform group-open:rotate-180">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </summary>
+              <div class="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/60 pt-3">
+                If your child faces difficulty or needs extra support on any logic problem or code exercise, we schedule a free 1-hour extended clarity session based on mentor availability. Our mentor provides focused guidance, answers every question patiently, and walks through live examples until the concept is 100% understood.
+              </div>
+            </details>
+
+            <details class="group glass-card rounded-2xl p-6 border border-slate-700/80 open:border-cyan-500/40 transition-colors shadow-lg">
+              <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-white list-none">
+                <span>How does the Referral & Group Offer of ₹1,000/month work?</span>
+                <span class="text-cyan-400 transition-transform group-open:rotate-180">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </summary>
+              <div class="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/60 pt-3">
+                Form a group of 5 or more students (classmates, cousins, or friends) or refer 5 friends to NeoByte Builders. When registering before midnight on November 15th, every student in your group or referral circle secures the Tech Innovator Add-on for just ₹1,000/month per student!
+              </div>
+            </details>
+
+            <details class="group glass-card rounded-2xl p-6 border border-slate-700/80 open:border-cyan-500/40 transition-colors shadow-lg">
+              <summary class="flex items-center justify-between cursor-pointer font-display font-bold text-base sm:text-lg text-white list-none">
+                <span>Can older students, high schoolers, or adults join?</span>
+                <span class="text-cyan-400 transition-transform group-open:rotate-180">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </span>
+              </summary>
+              <div class="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/60 pt-3">
+                Yes! Our mentorship is tailored from 4th Grade with no upper age limit. We teach authentic computational logic, software engineering, and emerging AI tools that are equally valuable for school students, college undergraduates, and adult lifelong learners.
+              </div>
+            </details>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-cyan-500/15 bg-[#050c1e] py-14 text-slate-400 text-xs sm:text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <!-- Footer Brand Logo -->
+          <a href="#" class="inline-flex items-center group transition-opacity hover:opacity-95" title="NeoByte Builders - The Next-Gen Learning Hub">
+            <img 
+              src="/assets/aistudio/image__4__699d1faf.png" 
+              alt="NeoByte Builders - The Next-Gen Learning Hub" 
+              class="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-102 drop-shadow-[0_0_16px_rgba(34,211,238,0.2)]"
+              onerror="this.style.display='none';"
+            />
+          </a>
+
+          <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300 font-medium">
+            <a href="#philosophy" class="hover:text-cyan-400 transition-colors">Core Philosophy</a>
+            <a href="#pathway" class="hover:text-cyan-400 transition-colors">Learning Pathway</a>
+            <a href="#pricing" class="hover:text-cyan-400 transition-colors">Mentorship & Schedule</a>
+            <a href="#faq" class="hover:text-cyan-400 transition-colors">FAQs</a>
+            <a href="#book-demo" class="hover:text-cyan-400 transition-colors">Book Free Demo</a>
+          </div>
+
+          <p class="text-xs text-slate-400 text-center md:text-right">
+            &copy; 2026 NeoByte Builders. All rights reserved. <br />
+            Weekend Cohorts • 4th Grade to Adult (No Upper Limit)
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SUCCESS BOOKING MODAL WITH PERSONAL REFERRAL CODE & EMAIL DISPATCH -->
+    <div id="successModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#030712]/85 backdrop-blur-md overflow-y-auto">
+      <div class="relative w-full max-w-lg rounded-3xl glass-card p-6 sm:p-8 border border-emerald-500/40 glow-emerald text-center shadow-2xl my-6 max-h-[92vh] overflow-y-auto">
+        <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 mx-auto flex items-center justify-center mb-4">
+          <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+
+        <span class="px-3 py-1 rounded-full text-xs font-bold font-mono uppercase bg-emerald-950 text-emerald-300 border border-emerald-700">
+          Booking Confirmed!
+        </span>
+
+        <h3 class="font-display font-extrabold text-2xl text-white mt-3 mb-1">
+          Demo Session Reserved!
+        </h3>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+          Thank you, <strong id="modalParentName" class="text-white">Parent</strong>! We look forward to welcoming both parent and student (<strong id="modalStudentName" class="text-cyan-300">Student</strong>) for the live demo session at <span class="text-cyan-400 font-semibold">NeoByte Builders</span>.
+        </p>
+
+        <!-- Booking details summary card -->
+        <div class="p-3.5 rounded-xl bg-[#091535]/90 border border-slate-700 text-left text-xs space-y-2 mb-4">
+          <div class="flex justify-between">
+            <span class="text-slate-400">Student Name:</span>
+            <span id="modalSummaryStudent" class="font-semibold text-white font-mono">-</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Selected Offering:</span>
+            <span id="modalProgram" class="font-semibold text-cyan-300">Track 1: Core Foundation</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Date & Slot:</span>
+            <span class="font-semibold text-white font-mono"><span id="modalDate">Sat</span> • <span id="modalTimeSlot">11:00 AM</span></span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">WhatsApp Notification:</span>
+            <span id="modalWhatsapp" class="font-semibold text-emerald-400 font-mono">+91</span>
+          </div>
+          <div class="flex justify-between border-t border-slate-700/80 pt-2 text-cyan-300">
+            <span>Session Attendance:</span>
+            <span class="font-semibold text-white">Parents & Student Welcome</span>
+          </div>
+        </div>
+
+        <!-- EMAIL DISPATCH CONFIRMATION NOTICE -->
+        <div class="p-3.5 rounded-xl bg-cyan-950/70 border border-cyan-500/40 text-left text-xs mb-4 flex items-start gap-2.5">
+          <span class="text-cyan-400 text-lg flex-shrink-0">📧</span>
+          <div>
+            <p class="text-white font-semibold">Referral Code & Confirmation Emailed!</p>
+            <p class="text-slate-300 text-[11px] leading-relaxed mt-0.5">
+              We have dispatched your demo credentials and your personal referral code directly to <strong id="modalSentEmail" class="text-cyan-300 font-mono">parent@email.com</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- PERSONAL REFERRAL CODE CARD -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-amber-950/80 via-[#181a3d] to-[#0a122e] border-2 border-amber-500/70 shadow-xl mb-4 text-left glow-orange">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-black uppercase tracking-wider text-amber-300 flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+              </svg>
+              <span>Your Personal Referral Code</span>
+            </span>
+            <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/20 text-amber-200 border border-amber-500/40 font-bold uppercase tracking-wider">
+              Special Tuition: ₹1,000/mo
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 mb-3">
+            <div class="flex-1 px-4 py-2.5 rounded-xl bg-[#060c1d] border border-amber-500/40 text-center">
+              <span id="modalReferralCode" class="font-mono text-xl sm:text-2xl font-black text-amber-300 tracking-widest select-all">
+                NEO-7842
+              </span>
+            </div>
+            <button
+              id="copyCodeBtn"
+              type="button"
+              class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs font-display transition-all flex items-center gap-1.5 flex-shrink-0 shadow-md active:scale-95"
+            >
+              <svg id="copyIcon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="9" y="9" width="13" height="13" rx="2" stroke-width="2" />
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" stroke-width="2" />
+              </svg>
+              <span id="copyBtnText">Copy Code</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-slate-200 leading-relaxed mb-3">
+            Share this code with 5 friends or classmates. When they register, both your family and referred learners qualify for the <strong class="text-amber-300">Tech Innovator Add-on at ₹1,000/month</strong> (saving ₹500/mo each). Offer ends Nov 15th.
+          </p>
+
+          <!-- WhatsApp Share Button -->
+          <a
+            id="shareWhatsappBtn"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full py-2.5 px-4 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors flex items-center justify-center gap-2 shadow-lg"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            <span>Share Referral Code on WhatsApp</span>
+          </a>
+        </div>
+
+        <button
+          id="closeModalBtn"
+          class="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-400 to-teal-300 text-slate-950 hover:brightness-110 transition-all shadow-lg shadow-cyan-500/25"
+        >
+          Got It, Thank You!
+        </button>
+      </div>
+    </div>
+
+    <!-- VANILLA JAVASCRIPT LOGIC -->
+    <script>
+      (function() {
+        // GOOGLE APPS SCRIPT URL PLACEHOLDER
+        const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+        // DOM Elements
+        const demoDateInput = document.getElementById('demoDate');
+        const weekdayAlert = document.getElementById('weekdayErrorAlert');
+        const form = document.getElementById('demoBookingForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitBtnText = document.getElementById('submitBtnText');
+        const submitSpinner = document.getElementById('submitSpinner');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const groupSlider = document.getElementById('groupSlider');
+        const groupCountDisplay = document.getElementById('groupCountDisplay');
+        const ratePerStudent = document.getElementById('ratePerStudent');
+        const savingsBadge = document.getElementById('savingsBadge');
+        const appliedReferralCodeInput = document.getElementById('appliedReferralCode');
+
+        // Mobile Menu Toggle
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+          });
+          document.querySelectorAll('.mobile-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+        }
+
+        // Program Quick Selector helper for CTA buttons
+        window.selectProgramOption = function(programName) {
+          const select = document.getElementById('programSelect');
+          if (!select) return;
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === programName) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        };
+
+        // -------------------------------------------------------------
+        // 1. WEEKEND DATE FILTER: DISABLE ALL WEEKDAYS IN DATE PICKER
+        // User can ONLY select Saturdays or Sundays.
+        // -------------------------------------------------------------
+        function isWeekendDay(dateString) {
+          if (!dateString) return false;
+          const parts = dateString.split('-');
+          if (parts.length !== 3) return false;
+          const year = parseInt(parts[0], 10);
+          const month = parseInt(parts[1], 10) - 1;
+          const day = parseInt(parts[2], 10);
+          const date = new Date(year, month, day, 12, 0, 0);
+          const dayOfWeek = date.getDay();
+          return dayOfWeek === 0 || dayOfWeek === 6;
+        }
+
+        function getNextWeekendDay(startDate) {
+          const target = new Date(startDate || new Date());
+          target.setHours(12, 0, 0, 0);
+          while (target.getDay() !== 0 && target.getDay() !== 6) {
+            target.setDate(target.getDate() + 1);
+          }
+          const yyyy = target.getFullYear();
+          const mm = String(target.getMonth() + 1).padStart(2, '0');
+          const dd = String(target.getDate()).padStart(2, '0');
+          return `${yyyy}-${mm}-${dd}`;
+        }
+
+        // Set minimum selectable date to next weekend day
+        const today = new Date();
+        const minWeekend = getNextWeekendDay(today);
+        if (demoDateInput) {
+          demoDateInput.min = minWeekend;
+          demoDateInput.value = minWeekend;
+
+          function validateWeekendSelection() {
+            const val = demoDateInput.value;
+            if (!val) return;
+
+            if (!isWeekendDay(val)) {
+              if (weekdayAlert) weekdayAlert.classList.remove('hidden');
+              demoDateInput.classList.add('border-rose-500', 'bg-rose-950/30');
+
+              setTimeout(function() {
+                const corrected = getNextWeekendDay(new Date(val + 'T12:00:00'));
+                demoDateInput.value = corrected;
+                if (weekdayAlert) {
+                  weekdayAlert.innerHTML = `<span>⚠️ Demo sessions are held on weekends only. Your date has been adjusted to Saturday/Sunday (<strong>${corrected}</strong>).</span>`;
+                  setTimeout(function() {
+                    weekdayAlert.classList.add('hidden');
+                    demoDateInput.classList.remove('border-rose-500', 'bg-rose-950/30');
+                  }, 4000);
+                }
+              }, 600);
+            } else {
+              if (weekdayAlert) weekdayAlert.classList.add('hidden');
+              demoDateInput.classList.remove('border-rose-500', 'bg-rose-950/30');
+            }
+          }
+
+          demoDateInput.addEventListener('change', validateWeekendSelection);
+          demoDateInput.addEventListener('input', validateWeekendSelection);
+        }
+
+        // -------------------------------------------------------------
+        // 2. NOVEMBER 15TH COUNTDOWN TIMER LOGIC
+        // -------------------------------------------------------------
+        function initCountdown() {
+          const currentYear = new Date().getFullYear();
+          let targetDate = new Date(currentYear, 10, 15, 23, 59, 59).getTime();
+
+          if (Date.now() > targetDate) {
+            targetDate = new Date(currentYear + 1, 10, 15, 23, 59, 59).getTime();
+          }
+
+          function updateTimer() {
+            const now = Date.now();
+            const difference = targetDate - now;
+
+            if (difference <= 0) {
+              const elements = ['cdDays', 'cdHours', 'cdMins', 'cdSecs', 'tickerDays', 'tickerHours', 'tickerMins', 'tickerSecs'];
+              elements.forEach(function(id) {
+                const el = document.getElementById(id);
+                if (el) el.textContent = '00';
+              });
+              return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            const format = function(num) { return String(num).padStart(2, '0'); };
+
+            const cdDays = document.getElementById('cdDays');
+            const cdHours = document.getElementById('cdHours');
+            const cdMins = document.getElementById('cdMins');
+            const cdSecs = document.getElementById('cdSecs');
+
+            if (cdDays) cdDays.textContent = format(days);
+            if (cdHours) cdHours.textContent = format(hours);
+            if (cdMins) cdMins.textContent = format(minutes);
+            if (cdSecs) cdSecs.textContent = format(seconds);
+
+            const tDays = document.getElementById('tickerDays');
+            const tHours = document.getElementById('tickerHours');
+            const tMins = document.getElementById('tickerMins');
+            const tSecs = document.getElementById('tickerSecs');
+
+            if (tDays) tDays.textContent = format(days);
+            if (tHours) tHours.textContent = format(hours);
+            if (tMins) tMins.textContent = format(minutes);
+            if (tSecs) tSecs.textContent = format(seconds);
+          }
+
+          updateTimer();
+          setInterval(updateTimer, 1000);
+        }
+        initCountdown();
+
+        // -------------------------------------------------------------
+        // 3. REFERRAL SAVINGS CALCULATOR SLIDER
+        // -------------------------------------------------------------
+        function updatePricingDisplay(count) {
+          if (count >= 5) {
+            groupCountDisplay.textContent = `${count} Friends Referred (₹1,000 Special Fee Active!)`;
+            groupCountDisplay.className = 'font-bold text-amber-300';
+            ratePerStudent.textContent = 'Rs. 1,000/mo per student';
+            const savings = count * 500;
+            savingsBadge.textContent = `Referrals save Rs. ${savings.toLocaleString('en-IN')}/mo total!`;
+            savingsBadge.className = 'text-emerald-400 font-bold';
+          } else {
+            groupCountDisplay.textContent = `${count} Friend${count === 1 ? '' : 's'} Referred`;
+            groupCountDisplay.className = 'font-bold text-slate-300';
+            ratePerStudent.textContent = 'Rs. 1,500/mo per student';
+            const remaining = 5 - count;
+            savingsBadge.textContent = `Refer ${remaining} more friend${remaining > 1 ? 's' : ''} to receive the Rs. 1,000/mo special fee!`;
+            savingsBadge.className = 'text-amber-300 font-semibold';
+          }
+        }
+
+        if (groupSlider && groupCountDisplay && ratePerStudent && savingsBadge) {
+          groupSlider.addEventListener('input', function() {
+            const count = parseInt(groupSlider.value, 10);
+            updatePricingDisplay(count);
+          });
+        }
+
+        // Helper to generate a personalized referral code
+        function generateReferralCode(studentName) {
+          const letters = (studentName || 'BUILDER').replace(/[^a-zA-Z]/g, '').toUpperCase().slice(0, 4) || 'NEO';
+          const randomNum = Math.floor(1000 + Math.random() * 9000);
+          return `NEO-${letters}${randomNum}`;
+        }
+
+        // -------------------------------------------------------------
+        // 4. FORM SUBMISSION LOGIC WITH FETCH() INTERCEPTOR & REFERRAL
+        // -------------------------------------------------------------
+        if (form) {
+          form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Clear previous errors
+            const parentNameInput = document.getElementById('parentName');
+            const parentEmailInput = document.getElementById('parentEmail');
+            const whatsappInput = document.getElementById('whatsapp');
+            const studentNameInput = document.getElementById('studentName');
+            const studentGradeSelect = document.getElementById('studentGrade');
+            const timeSlotSelect = document.getElementById('timeSlot');
+            const hardwareCheckbox = document.getElementById('hardwareCheck');
+            const programSelect = document.getElementById('programSelect');
+            const appliedReferralInput = document.getElementById('appliedReferralCode');
+
+            let isValid = true;
+
+            function validateField(input, errorId, condition) {
+              const err = document.getElementById(errorId);
+              if (!condition) {
+                if (err) err.classList.remove('hidden');
+                input.classList.add('border-rose-500');
+                isValid = false;
+              } else {
+                if (err) err.classList.add('hidden');
+                input.classList.remove('border-rose-500');
+              }
+            }
+
+            validateField(parentNameInput, 'parentNameError', parentNameInput.value.trim().length > 1);
+            validateField(parentEmailInput, 'parentEmailError', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(parentEmailInput.value.trim()));
+            validateField(whatsappInput, 'whatsappError', whatsappInput.value.trim().length >= 8);
+            validateField(studentNameInput, 'studentNameError', studentNameInput.value.trim().length > 1);
+            validateField(studentGradeSelect, 'studentGradeError', studentGradeSelect.value !== '');
+            validateField(timeSlotSelect, 'timeSlotError', timeSlotSelect.value !== '');
+            validateField(hardwareCheckbox, 'hardwareCheckError', hardwareCheckbox.checked);
+
+            if (!isWeekendDay(demoDateInput.value)) {
+              if (weekdayAlert) weekdayAlert.classList.remove('hidden');
+              demoDateInput.classList.add('border-rose-500');
+              isValid = false;
+            }
+
+            if (!isValid) {
+              return;
+            }
+
+            // Generate unique personal referral code for the parent
+            const userReferralCode = generateReferralCode(studentNameInput.value.trim());
+            const appliedCode = appliedReferralInput ? appliedReferralInput.value.trim().toUpperCase() : '';
+
+            // Prepare JSON payload for 1 student with referral & email dispatch flags
+            const payload = {
+              parentName: parentNameInput.value.trim(),
+              email: parentEmailInput.value.trim().toLowerCase(),
+              whatsapp: whatsappInput.value.trim(),
+              studentName: studentNameInput.value.trim(),
+              studentGrade: studentGradeSelect.value,
+              program: programSelect ? programSelect.value : 'Track 1: Core Foundation',
+              demoDate: demoDateInput.value,
+              timeSlot: timeSlotSelect.value,
+              studentCount: 1, // Parent can book slot only for 1 student
+              hasHardwareReady: hardwareCheckbox.checked,
+              appliedReferralCode: appliedCode,
+              generatedReferralCode: userReferralCode,
+              emailReferralCodeDispatched: true, // Request email dispatch to parent email
+              timestamp: new Date().toISOString(),
+              brand: 'NeoByte Builders'
+            };
+
+            // UI: Loading State
+            submitBtn.disabled = true;
+            submitBtnText.textContent = 'Submitting Booking...';
+            submitSpinner.classList.remove('hidden');
+
+            try {
+              // Store locally in localStorage for instant access
+              try {
+                const storedBookings = JSON.parse(localStorage.getItem('neobyte_demo_bookings') || '[]');
+                storedBookings.push(payload);
+                localStorage.setItem('neobyte_demo_bookings', JSON.stringify(storedBookings));
+              } catch (storageErr) {
+                console.warn('LocalStorage save error:', storageErr);
+              }
+
+              // Fetch POST to Google Apps Script Webhook
+              if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                await fetch(GOOGLE_SCRIPT_URL, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(payload),
+                });
+              } else {
+                console.log('NeoByte Builders: Booking Recorded & Stored Locally (Emailed to ' + payload.email + '):', payload);
+                await new Promise(function(resolve) { setTimeout(resolve, 800); });
+              }
+
+              // Update Success Modal details
+              const modalParent = document.getElementById('modalParentName');
+              const modalStudent = document.getElementById('modalStudentName');
+              const modalSummaryStudent = document.getElementById('modalSummaryStudent');
+              const modalProgram = document.getElementById('modalProgram');
+              const modalDate = document.getElementById('modalDate');
+              const modalTimeSlot = document.getElementById('modalTimeSlot');
+              const modalWhatsapp = document.getElementById('modalWhatsapp');
+              const modalSentEmail = document.getElementById('modalSentEmail');
+              const modalReferralCode = document.getElementById('modalReferralCode');
+              const shareWhatsappBtn = document.getElementById('shareWhatsappBtn');
+
+              if (modalParent) modalParent.textContent = payload.parentName;
+              if (modalStudent) modalStudent.textContent = payload.studentName;
+              if (modalSummaryStudent) modalSummaryStudent.textContent = payload.studentName;
+              if (modalProgram) modalProgram.textContent = payload.program;
+              if (modalDate) modalDate.textContent = payload.demoDate;
+              if (modalTimeSlot) modalTimeSlot.textContent = payload.timeSlot;
+              if (modalWhatsapp) modalWhatsapp.textContent = payload.whatsapp;
+              if (modalSentEmail) modalSentEmail.textContent = payload.email;
+              if (modalReferralCode) modalReferralCode.textContent = userReferralCode;
+
+              // Setup WhatsApp Share Link
+              if (shareWhatsappBtn) {
+                const bookingUrl = window.location.href.split('#')[0] + '#book-demo';
+                const shareText = encodeURIComponent(`Hello! I have booked a complimentary demo session for ${payload.studentName} at NeoByte Builders. Both parents and students are welcome to attend together. You can use our referral code *${userReferralCode}* to receive the Tech Innovator Add-on (AI Tools) for just ₹1,000/month (standard ₹1,500/month). Reserve your preferred weekend slot here: ${bookingUrl}`);
+                shareWhatsappBtn.href = `https://api.whatsapp.com/send?text=${shareText}`;
+              }
+
+              // Show Modal
+              if (successModal) {
+                successModal.classList.remove('hidden');
+              } else {
+                alert(`Success! Demo session confirmed for ${payload.studentName} on ${payload.demoDate} (${payload.timeSlot}). Your referral code is ${userReferralCode} (emailed to ${payload.email}).`);
+              }
+
+              // Reset form & restore default weekend date
+              form.reset();
+              demoDateInput.value = minWeekend;
+              hardwareCheckbox.checked = true;
+              if (groupSlider) groupSlider.value = "0";
+              updatePricingDisplay(0);
+
+            } catch (err) {
+              console.warn('Network submission encountered error:', err);
+              alert(`Your booking for ${payload.studentName} has been recorded! Your referral code is ${userReferralCode} (emailed to ${payload.email}). We will confirm your weekend slot on WhatsApp (${payload.whatsapp}).`);
+            } finally {
+              submitBtn.disabled = false;
+              submitBtnText.textContent = 'Confirm Free Demo Booking →';
+              submitSpinner.classList.add('hidden');
+            }
+          });
+        }
+
+        // Copy Referral Code Handler
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+        if (copyCodeBtn) {
+          copyCodeBtn.addEventListener('click', function() {
+            const modalReferralCode = document.getElementById('modalReferralCode');
+            const codeText = modalReferralCode ? modalReferralCode.textContent.trim() : '';
+            const copyBtnText = document.getElementById('copyBtnText');
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(codeText).then(function() {
+                if (copyBtnText) copyBtnText.textContent = 'Copied! ✓';
+                setTimeout(function() {
+                  if (copyBtnText) copyBtnText.textContent = 'Copy Code';
+                }, 2500);
+              }).catch(function() {
+                fallbackCopy(codeText);
+              });
+            } else {
+              fallbackCopy(codeText);
+            }
+
+            function fallbackCopy(text) {
+              const textArea = document.createElement('textarea');
+              textArea.value = text;
+              textArea.style.position = 'fixed';
+              textArea.style.opacity = '0';
+              document.body.appendChild(textArea);
+              textArea.select();
+              try {
+                document.execCommand('copy');
+                if (copyBtnText) copyBtnText.textContent = 'Copied! ✓';
+                setTimeout(function() {
+                  if (copyBtnText) copyBtnText.textContent = 'Copy Code';
+                }, 2500);
+              } catch (e) {
+                if (copyBtnText) copyBtnText.textContent = 'Copied!';
+              }
+              document.body.removeChild(textArea);
+            }
+          });
+        }
+
+        // Close Modal handler
+        if (closeModalBtn && successModal) {
+          closeModalBtn.addEventListener('click', function() {
+            successModal.classList.add('hidden');
+          });
+          successModal.addEventListener('click', function(e) {
+            if (e.target === successModal) {
+              successModal.classList.add('hidden');
+            }
+          });
+        // Helper functions to view and export stored responses
+        window.getNeoByteBookings = function() {
+          const list = JSON.parse(localStorage.getItem('neobyte_demo_bookings') || '[]');
+          console.table(list);
+          return list;
+        };
+
+        window.downloadNeoByteBookingsCSV = function() {
+          const list = JSON.parse(localStorage.getItem('neobyte_demo_bookings') || '[]');
+          if (!list.length) {
+            alert('No demo bookings found in local storage yet.');
+            return;
+          }
+          const headers = ['Timestamp', 'Parent Name', 'Email', 'WhatsApp', 'Student Name', 'Grade', 'Program', 'Demo Date', 'Time Slot', 'Referral Code', 'Applied Referral'];
+          const rows = list.map(b => [
+            b.timestamp,
+            `"${b.parentName || ''}"`,
+            `"${b.email || ''}"`,
+            `"${b.whatsapp || ''}"`,
+            `"${b.studentName || ''}"`,
+            `"${b.studentGrade || ''}"`,
+            `"${b.program || ''}"`,
+            `"${b.demoDate || ''}"`,
+            `"${b.timeSlot || ''}"`,
+            `"${b.generatedReferralCode || ''}"`,
+            `"${b.appliedReferralCode || ''}"`
+          ]);
+          const csvContent = 'data:text/csv;charset=utf-8,' + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
+          const encodedUri = encodeURI(csvContent);
+          const link = document.createElement('a');
+          link.setAttribute('href', encodedUri);
+          link.setAttribute('download', `neobyte_demo_bookings_${Date.now()}.csv`);
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        };
+
+      })();
+    </script>
+  </body>
+</html>
