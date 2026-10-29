@@ -1,0 +1,71 @@
+Here is a detailed, week-by-week breakdown for Phase 1. This schedule moves her from understanding the math to writing production-level modeling code.
+
+### Week 1: Mastering Advanced Algorithms
+
+The goal this week is to understand *why* these algorithms dominate tabular data and how to implement them using `scikit-learn`, `xgboost`, and `lightgbm`.
+
+* **Days 1-2: Bagging & Random Forests**
+* **Concept:** Learn the difference between a single Decision Tree (prone to overfitting) and an ensemble of trees. Understand "Bagging" (Bootstrap Aggregating).
+* **Implementation:** Train a `RandomForestClassifier` and `RandomForestRegressor`.
+* **Key focus:** Learn how to extract and interpret `feature_importances_` to see which variables actually matter.
+
+
+* **Days 3-4: Boosting (XGBoost & LightGBM)**
+* **Concept:** Understand how Boosting differs from Bagging (trees learn sequentially from the mistakes of previous trees).
+* **Implementation:** Set up `XGBoost` and `LightGBM`.
+* **Key focus:** These algorithms are incredibly fast but prone to overfitting. Learn the difference between the two (XGBoost grows trees level-wise, LightGBM grows them leaf-wise).
+
+
+* **Days 5-6: Support Vector Machines (SVM)**
+* **Concept:** Understand hyperplanes, margins, and the "Kernel Trick" (mapping data to higher dimensions to make it linearly separable).
+* **Implementation:** Train `SVC` and `SVR`.
+* **Key focus:** Understand when to use Linear vs. RBF (Radial Basis Function) kernels and how feature scaling strictly dictates SVM performance.
+
+
+* **Day 7: Mini-Project & Review**
+* Take a clean dataset (like the Breast Cancer dataset from `sklearn.datasets`) and train all three models on it. Compare their default performance and training time.
+
+
+
+### Week 2: Data Engineering & Robust Validation
+
+In the real world, data is messy. This week focuses on the engineering required before a model ever sees the data.
+
+* **Days 1-2: Advanced Feature Engineering**
+* **Categorical Encoding:** Move beyond simple One-Hot Encoding. Learn Target Encoding and Frequency Encoding for high-cardinality features (like zip codes or product IDs).
+* **Feature Creation:** Practice creating interaction features (e.g., combining `house_length` and `house_width` into `total_area`) and binning continuous variables.
+
+
+* **Days 3-4: Handling Imbalanced Datasets**
+* **Concept:** What happens when 99% of your data is "Normal" and 1% is "Fraud"? (Hint: The model just guesses "Normal" every time).
+* **Techniques:** Learn under-sampling the majority class and over-sampling the minority class using **SMOTE** (Synthetic Minority Over-sampling Technique) via the `imbalanced-learn` library.
+* **Implementation:** Practice adjusting the `class_weight='balanced'` parameter in algorithms like Random Forest.
+
+
+* **Days 5-7: Advanced Cross-Validation (CV)**
+* **Concept:** Stop using a simple `train_test_split`. It leads to lucky (or unlucky) splits.
+* **Techniques:** Learn **K-Fold Cross-Validation** to train the model on multiple different slices of the data.
+* **Implementation:** Use `StratifiedKFold` for classification tasks to ensure each fold has the exact same proportion of target classes.
+
+
+
+### Week 3: Tuning, Metrics & The Kaggle Milestone
+
+This week ties everything together by properly evaluating the models and competing on Kaggle.
+
+* **Days 1-2: Moving Beyond Accuracy**
+* **Classification Metrics:** Learn to read a Confusion Matrix. Understand when to optimize for **Precision** (minimizing false positives, e.g., spam detection) vs. **Recall** (minimizing false negatives, e.g., cancer detection). Calculate the **F1-Score**.
+* **Probability Metrics:** Learn how to plot an ROC Curve and calculate the **ROC-AUC** score to evaluate how well the model separates classes at different thresholds.
+
+
+* **Days 3-4: Hyperparameter Tuning**
+* **Techniques:** Learn how to search for the best model settings without doing it manually.
+* **Implementation:** Use `GridSearchCV` (tests every combination) and `RandomizedSearchCV` (tests random combinations, much faster).
+* **Pro-tip:** Look into **Optuna**, a modern, highly efficient framework for hyperparameter optimization that is widely used in Kaggle.
+
+
+* **Days 5-7: The Kaggle Milestone (House Prices or Titanic)**
+* **Step 1:** Download the data and perform Exploratory Data Analysis (EDA) using `pandas` and `seaborn`.
+* **Step 2:** Build a robust preprocessing pipeline using `sklearn.pipeline.Pipeline` (handle missing values, scale numerical features, encode categorical features).
+* **Step 3:** Train a baseline XGBoost model and submit to Kaggle to get an initial rank.
+* **Step 4:** Spend the remaining time iterating: engineer new features, tune XGBoost hyperparameters with Optuna/GridSearch, and submit again to hit that Top 20% goal.
